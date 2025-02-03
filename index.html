@@ -1,30 +1,93 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人形象網站</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3列 */
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+    
 </head>
 <body>
+    <canvas id="backgroundCanvas"></canvas>
     <header>
-        <h1>你的名字</h1>
-        <p>專業領域 | 技能</p>
+        
         <nav>
             <ul>
                 <li><a href="#about">關於我</a></li>
+                <li><a href="#education">學歷</a></li>
+                <li><a href="#workexperience">工作經驗</a></li>
+                <li><a href="#certificates">證照</a></li>
                 <li><a href="#portfolio">作品展示</a></li>
                 <li><a href="#contact">聯絡方式</a></li>
+                <li>
+                    <select id="language-select">
+                        <option value="zh">中文</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </li>
             </ul>
+            <h1 class="glow"><a href="#hello">GuanYuC.</a></h1>
         </nav>
+       
     </header>
     
-    <section id="about">
-        <h2>關於我</h2>
-        <p>這裡寫你的個人介紹、學歷、經歷、專業技能等。</p>
-    </section>
+    <section id="hello" class="hero">
+         <h1 class="glow">歡迎來到陳冠宇的個人形象網站</h1>
+         <h2>Welcome to GuanYuC personal image website !!</h2>
+    </section>  
     
+    <section id="about" class="hero">
+        <h2>我是<span class="typing"></span></h2>
+        <p>專注於前端開發、AI技術與數據分析</p>
+    </section>
+
+    <section id="education" class="hero">
+        <h2 >學歷</h2>
+
+    </section>
+
+    <section id="workexperience" class="hero">
+        <h2 >工作經驗</h2>
+
+    </section>
+
+    <section id="certificates" class="hero">
+        <h2 >證照</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="./images/ERP-GP.jpg" alt="證照1">
+                <figcaption>ERP軟體應用師</figcaption>
+            </div>
+            <div class="image-item">
+                <img src="./images/ITS.jpg" alt="證照2">
+                <figcaption>ITS資通安全核心能力</figcaption>
+            </div>
+            <div class="image-item">
+                <img src="./images/CISCO CCST.jpg" alt="證照3">
+                <figcaption>CISCO CCST</figcaption>
+            </div>
+        </div>
+    </section>
+
     <section id="portfolio">
         <h2>作品展示</h2>
         <div class="project">
@@ -40,7 +103,6 @@
             <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/GuanYuC9281/benno1.github.io.git" target="_blank"><i class="fab fa-github"></i></a>
             <a href="mailto:cben2400@gmail.com"><i class="fas fa-envelope"></i></a>
-
         </div>
     </section>
     

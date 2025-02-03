@@ -1,39 +1,122 @@
+/* styles.css - 科技感個人形象網站 */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
+    background: black;
+    color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
 header {
-    background: #333;
-    color: white;
+    background: url('images/992model.png') no-repeat center center;
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
+section h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0px 0px 15px cyan;
+}
+
+/* styles.css */
+nav ul li select {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid cyan;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li select:hover {
+    border-color: #0ff;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+nav ul li select option {
+    background: black;
+    color: white;
+}
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    text-shadow: 0px 0px 10px cyan;
 }
 
 section {
-    padding: 50px 20px;
+    padding: 100px 20px;
+}
+
+#about, #portfolio, #contact {
+    margin-top: 100px;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px cyan;
 }
 
 footer {
-    background: #333;
-    color: white;
-    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 14px;
+}
+footer {
+    background: url('images/992-gt3rs.jpg') no-repeat center center;
+    background-size: cover;
+    color: white; /* 讓文字顏色與背景有對比 */
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+footer p {
+    background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景，提升可讀性 */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
 }
 .social-media {
     display: flex;
@@ -52,4 +135,14 @@ footer {
 .social-media a:hover {
     transform: scale(1.2);
     color: #0073b1; /* LinkedIn 藍色，可以根據需求更改 */
+}
+
+/* 粒子動畫背景 */
+canvas#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
