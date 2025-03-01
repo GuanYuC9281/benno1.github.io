@@ -22,19 +22,20 @@
             height: auto;
         }
     </style>
-    
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
-    <header>
-        
-        <nav>
+    <header class="header">
+        <a href="#" class="logo">GuanYuC.</a>
+        <nav class="navbar">
             <ul>
+                <li><a href="#hello"><i class="fas fa-home"></i></a></li>
                 <li><a href="#about">關於我</a></li>
                 <li><a href="#education">學歷</a></li>
                 <li><a href="#workexperience">工作經驗</a></li>
                 <li><a href="#certificates">證照</a></li>
                 <li><a href="#portfolio">作品展示</a></li>
+                <li><a href="#future">未來展望</a></li>
                 <li><a href="#contact">聯絡方式</a></li>
                 <li>
                     <select id="language-select">
@@ -42,36 +43,108 @@
                         <option value="en">English</option>
                         <option value="de">Deutsch</option>
                         <option value="vi">Tiếng Việt</option>
+                        <option value="ja">日本語</option>
                     </select>
                 </li>
             </ul>
-            <h1 class="glow"><a href="#hello">GuanYuC.</a></h1>
+            
         </nav>
-       
+
+
+    
+
+         <!-- 跑車動畫 -->
+         <div class="car-animation">
+            <span style="font-size: 24px;">🦖</span>
+        </div>
     </header>
     
     <section id="hello" class="hero">
-         <h1 class="glow">歡迎來到陳冠宇的個人形象網站</h1>
-         <h2>Welcome to GuanYuC personal image website !!</h2>
+        <h1 class="glow">"勇於挑戰，成就卓越"</h1>
+        <h2>您好~我是陳冠宇，歡迎來到我的個人形象網站</h2>
+        <h3>我是<span class="typing"></span></h3>
+        <p>專注於網頁前端開發、AI技術、數據分析與ESG永續經營理念</p>
+    </section>  
+    
+    <section id="hello" class="hero">
+        <h3>下滑了解更多</h3>
     </section>  
     
     <section id="about" class="hero">
-        <h2>我是<span class="typing"></span></h2>
-        <p>專注於前端開發、AI技術與數據分析</p>
+        <h2>關於我</h2>
+        <h3>我是陳冠宇,目前就讀於中國文化大學資訊管理學系</h3>
+        
+        <div class="about-container">
+            <!-- 左側圖片 -->
+            <div class="profile-container">
+                <div class="image-slider">
+                    <img id="profile-img" src="images/4 (2).jpg" alt="Profile Image">
+                </div>
+            </div>
+    
+            <!-- 右側內容 -->
+            <div class="additional-content">
+                <ul>Skill & Experience</ul>
+                <ul>
+                <li>
+                前端開發:具有 2~3 年 的開發與專案經驗，熟悉 ASP.NET MVC、C#、JavaScript、MS SQL 等技術.
+                </li>
+                </ul>
+                <ul>
+                <li>
+                AI技術:目前為 Berry AI 團隊的 AI 標註師,主要負責 圖像處理與機器學習統計等相關專案.
+                </li>
+                </ul>
+                <ul>
+                <li>
+                ESG技術:就讀的過程中修習過ESG導論課程,並且獨力完成簡易ESG報告書.
+                </li>
+                </ul>
+                <ul>
+                <li>
+                個性:樂觀冷靜,具換為思考能力,熱愛挑戰與學習,善於解決問題,並具備 自主學習與團隊協作能力.
+                </li>
+                </ul>
+            </div>
+        </div>
     </section>
-
+    
+   
     <section id="education" class="hero">
-        <h2 >學歷</h2>
-
+        <h2>學歷</h2>
+        <img src="images/edu.jpg" alt="學歷" width="1000" height="auto">
+        <figcaption>學歷流程圖</figcaption>
     </section>
 
     <section id="workexperience" class="hero">
-        <h2 >工作經驗</h2>
-
+        <h2>工作經驗</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="images/AI_worker.png" alt="AI 標註師">
+                </div>
+                <div class="timeline-content">
+                    <h3>AI 標註師</h3>
+                    <span class="date">2024/8 ~ 至今</span>
+                    <p>負責影像處理與機器學習統計,開發 ASP.NET MVC 網站.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Gogoro門市助理</h3>
+                    <span class="date">2023/7 ~ 2024/3</span>
+                    <p>顧客服務與門市管理,協助產品銷售.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/gogoro.jpg" alt="Gogoro門市助理">
+                </div>
+            </div>
+        </div>
     </section>
+    
 
     <section id="certificates" class="hero">
-        <h2 >證照</h2>
+        <h2>證照</h2>
         <div class="image-container">
             <div class="image-item">
                 <img src="./images/ERP-GP.jpg" alt="證照1">
@@ -90,14 +163,165 @@
 
     <section id="portfolio">
         <h2>作品展示</h2>
+    
+        <!-- 第一個作品：AI 搜sogood存好股 -->
         <div class="project">
-            <h3>專案名稱</h3>
-            <p>專案描述，技術堆疊，連結等。</p>
+            <div class="project-image">
+                <img src="images/sogood.png" alt="搜sogood存好股">
+            </div>
+            <div class="project-content">
+                <h3>📌 專題作品:搜sogood存好股 ( 2023/9 ~ 2024/11 ) </h3>
+                <p>我擔任專題 「 文案撰寫 」 與 「 前端網頁程式架構設計 」 ,完成Model.View.Controller的撰寫,確保網頁功能的運作正常,使用戶使用時更直覺的網站,其中在登入時的Email信箱認證,也確保帳號重複註冊濫用的情形。</p>
+                <ul>專案成果:
+                    <li>✅ 開發 「 討論區 」 功能,如即點即展開的商品資訊與動態導航,讓使用者操作更直覺.</li>
+                    <li>✅ 新增 「 個人化 」 系統,根據用戶行為動態更新內容,成功提升留存率與轉化效果.</li>
+                    <li>✅ 整體網站設計簡潔流暢,視覺與操作一體化,大幅提高用戶體驗.</li>
+                    <li>✅ 優化網站核心結構,實現快速響應並提升訪問穩定性.</li>
+                </ul>
+                <a href="https://sogood.works" target="_blank" class="btn">🔗 網站連結</a>
+                <a href="https://www.youtube.com/watch?v=GUaKKLdPOrs" target="_blank" class="btn youtube-button">▶️ 觀看影片</a>
+                <button class="voice-button" data-text="搜sogood存好股是一款 以存股為和核心的平台,目標是建立一個具有投資建議、分析及新手也適合的存股投資網站,主要使用 Visual Studio 2022 ASP.NET MVC、ChatGPT 與 MS SQL 進行開發。">🎤 聆聽介紹</button>
+            </div>
+        </div>
+    
+        <!-- 第二個作品：ESG 簡易報告書（可下載 Word 檔） -->
+        <div class="project">
+            <div class="project-image">
+                <img src="images/ESG_report.png" alt="ESG 簡易報告書">
+            </div>
+            <div class="project-content">
+                <h3>📌 ESG 簡易報告書- ( 自製版本 ) </h3>
+                <p>一份簡易版 ESG 報告書,適用於企業永續發展規劃.</p>
+                <button class="voice-button" data-text="這是一份 自製統一企業集團 ESG 簡易報告書(非官方版本),提供企業永續發展的基礎指南,協助企業制定環境、社會和治理策略.">🎤 聆聽介紹</button>
+            </div>
+        </div>
+    
+        <!-- 第三個作品：開發中 -->
+        <div class="project">
+            <div class="project-image">
+                <img src="images/coming_soon.webp" alt="開發中">
+            </div>
+            <div class="project-content">
+                <h3>📌 新作品：敬請期待</h3>
+                <p>正在開發全新專案,敬請期待！</p>
+            </div>
+        </div>
+    
+    </section>
+    
+    
+    <section id="future" class="hero">
+        <h2>未來展望</h2>
+        <div class="timeline">
+
+            <!-- 資安 (左滑入) -->
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="images/cybersecurity.png" alt="資安發展">
+                </div>
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>資安發展</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>學習滲透測試、網路安全管理,熟悉資安工具 ( 如 Wireshark、Kali Linux ),確保軟體系統安全.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- AI 自動化 (右滑入) -->
+            <div class="timeline-item">
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>AI 自動化</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>探索 AI 在測試與數據分析中的應用,學習 RPA 自動化技術,結合機器學習提升企業運營效率.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/ai_automation.png" alt="AI 自動化">
+                </div>
+            </div>
+    
+            <!-- 軟體測試 (左滑入) -->
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="images/software_testing.png" alt="軟體測試">
+                </div>
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>軟體測試</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>學習測試自動化框架 ( 如 Selenium、JUnit ) ,專注於功能測試、壓力測試與安全測試,提升產品穩定性.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Python 自學 (右滑入) -->
+            <div class="timeline-item">
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Python 語言</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>深入學習 Python,掌握 Django、Flask 後端開發,運用數據分析與 AI 模型開發,提高編程能力.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/python_learning.png" alt="Python 自學">
+                </div>
+            </div>
+    
+            <!-- ESG 概念 (左滑入) -->
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="images/esg.png" alt="ESG 永續經營">
+                </div>
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>ESG 永續經營</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>了解企業 ESG ( 環境、社會、治理 ) 發展,學習如何應用數據分析與技術支持企業永續發展策略.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 商業經營 (右滑入) -->
+            <div class="timeline-item">
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>商業經營</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>學習企業管理、行銷策略與數據驅動決策,結合科技與創新思維提升競爭力.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/business.png" alt="商業經營">
+                </div>
+            </div>
+    
         </div>
     </section>
     
     <section id="contact">
         <h2>聯絡方式</h2>
+        <p class="calligraphy">連結創新,共創未來,任何合作機會,歡迎聯絡 讓我們攜手打造更智能的未來！ &#128077;</p>
         <div class="social-media">
             <a href="https://www.facebook.com/profile.php?id=100016934860213" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -106,7 +330,9 @@
         </div>
     </section>
     
+    
     <footer>
+        <p id="visit-counter">瀏覽次數: 0</p>
         <p>&copy; ChenKuanYu By 2025</p>
     </footer>
 </body>
