@@ -785,3 +785,110 @@ section.active {
     max-width: 80%;  /* 設定最大寬度，避免文字過長 */
 }
 
+/* --- 響應式設計開始 --- */
+
+/* 手機版 (最大768px) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .hero h1, .hero h2, .hero h3, .hero p {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .timeline {
+        flex-direction: column;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-image, .timeline-content {
+        width: 100%;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .car-animation {
+        display: none;
+    }
+}
+
+/* 平板版 (769px ~ 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero h1, .hero h2, .hero h3, .hero p {
+        font-size: 95%;
+    }
+
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .timeline-image, .timeline-content {
+        width: 100%;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 小筆電版 (993px ~ 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero h1, .hero h2, .hero h3, .hero p {
+        font-size: 100%;
+    }
+
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .timeline-image, .timeline-content {
+        width: 45%;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
