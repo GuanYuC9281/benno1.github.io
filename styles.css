@@ -100,7 +100,7 @@ nav ul li a:hover {
 }
 
 
-/* 語言選擇下拉選單 */
+/* ====== 原本的語言選擇下拉選單 ====== */
 nav ul li select {
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -122,6 +122,56 @@ nav ul li select option {
     color: white;
 }
 
+/* ====== 地球按鈕（靜態切換語言） ====== */
+.language-switcher {
+    position: relative;
+}
+
+#language-toggle {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid cyan;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#language-toggle:hover {
+    border-color: #0ff;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+/* 小語言選單（初始隱藏） */
+#language-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid cyan;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#language-menu li {
+    margin: 5px 0;
+}
+
+#language-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#language-menu li a:hover {
+    color: cyan;
+}
+
+/* ====== 全站區塊間距（原本的） ====== */
 section {
     padding: 100px 20px;
 }
@@ -734,5 +784,4 @@ section.active {
     margin: 0 auto;  /* 讓文字更居中 */
     max-width: 80%;  /* 設定最大寬度，避免文字過長 */
 }
-
 

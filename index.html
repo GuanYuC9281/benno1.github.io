@@ -27,28 +27,30 @@
     <canvas id="backgroundCanvas"></canvas>
     <header class="header">
         <a href="#" class="logo">GuanYuC.</a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#hello"><i class="fas fa-home"></i></a></li>
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#education">學歷</a></li>
-                <li><a href="#workexperience">工作經驗</a></li>
-                <li><a href="#certificates">證照</a></li>
-                <li><a href="#portfolio">作品展示</a></li>
-                <li><a href="#future">未來展望</a></li>
-                <li><a href="#contact">聯絡方式</a></li>
-                <li>
-                    <select id="language-select">
-                        <option value="zh">中文</option>
-                        <option value="en">English</option>
-                        <option value="de">Deutsch</option>
-                        <option value="vi">Tiếng Việt</option>
-                        <option value="ja">日本語</option>
-                    </select>
-                </li>
-            </ul>
-            
-        </nav>
+       <nav class="navbar">
+    <ul>
+        <li><a href="#hello"><i class="fas fa-home"></i></a></li>
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#education">學歷</a></li>
+        <li><a href="#workexperience">工作經驗</a></li>
+        <li><a href="#certificates">證照</a></li>
+        <li><a href="#portfolio">作品展示</a></li>
+        <li><a href="#future">未來展望</a></li>
+        <li><a href="#contact">聯絡方式</a></li>
+    </ul>
+   <!-- 地球語言切換按鈕 -->
+<li class="language-switcher">
+  <button id="language-toggle" type="button">🌐</button>
+  <ul id="language-menu">
+    <li><a href="index.html">中文</a></li>
+    <li><a href="en.index.html">English</a></li>
+    <li><a href="ja.index.html">日本語</a></li>
+    <li><a href="de.index.html">Deutsch</a></li>
+    <li><a href="vi.index.html">Tiếng Việt</a></li>
+    <li><a href="es.index.html">Español</a></li>
+  </ul>
+</li>
+</nav>
 
 
     
@@ -116,31 +118,48 @@
         <figcaption>學歷流程圖</figcaption>
     </section>
 
-    <section id="workexperience" class="hero">
-        <h2>工作經驗</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-image">
-                    <img src="images/AI_worker.png" alt="AI 標註師">
-                </div>
-                <div class="timeline-content">
-                    <h3>AI 標註師</h3>
-                    <span class="date">2024/8 ~ 至今</span>
-                    <p>負責影像處理與機器學習統計,開發 ASP.NET MVC 網站.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Gogoro門市助理</h3>
-                    <span class="date">2023/7 ~ 2024/3</span>
-                    <p>顧客服務與門市管理,協助產品銷售.</p>
-                </div>
-                <div class="timeline-image">
-                    <img src="images/gogoro.jpg" alt="Gogoro門市助理">
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="workexperience" class="hero">
+  <h2>工作經驗</h2>
+  <div class="timeline">
+
+    <!-- 測試工程師-實習生 -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/rainbow.png" alt="測試工程師-實習生">
+      </div>
+      <div class="timeline-content">
+        <h3>公司名稱: 馬紹爾群島商彩虹科技股份有限公司</h3>  <h3>測試工程師-實習生</h3>
+        <span class="date">2025/2 ~ 2025/8</span>
+        <p>實習內容主要處理公司遊戲產品前後台新功能測試、回歸測試、黑盒/白盒測試、撰寫測試用例、參與測試需求會議。</p>
+      </div>
+    </div>
+
+    <!-- AI 標註師 -->
+    <div class="timeline-item reverse">
+      <div class="timeline-image">
+        <img src="images/berryai.png" alt="AI 標註師">
+      </div>
+      <div class="timeline-content">
+        <h3>公司名稱: Berry-AI </h3><h3>AI 標註師</h3>
+        <span class="date">2024/8 ~ 2024/12</span>
+        <p>負責影像處理與機器學習統計,協助標註影像.</p>
+      </div>
+    </div>
+
+    <!-- Gogoro門市助理 -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/gogoro.png" alt="Gogoro門市助理">
+      </div>
+      <div class="timeline-content">
+        <h3>公司名稱: Gogoro 睿能創意</h3><h3>Gogoro門市助理</h3>
+        <span class="date">2023/7 ~ 2024/3</span>
+        <p>顧客服務與門市管理,協助產品銷售及交車.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
     
 
     <section id="certificates" class="hero">
@@ -321,7 +340,7 @@
     
     <section id="contact">
         <h2>聯絡方式</h2>
-        <p class="calligraphy">連結創新,共創未來,任何合作機會,歡迎聯絡 讓我們攜手打造更智能的未來！ &#128077;</p>
+        <p class="calligraphy">連結創新,共創未來,任何合作機會,歡迎聯絡 讓我們攜手打造更智能的未來！</p>
         <div class="social-media">
             <a href="https://www.facebook.com/profile.php?id=100016934860213" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -330,10 +349,11 @@
         </div>
     </section>
     
-    
-    <footer>
+
+    <footer style="text-align: center; padding: 20px;">
         <p id="visit-counter">瀏覽次數: 0</p>
-        <p>&copy; ChenKuanYu By 2025</p>
+        <p>© 2025 GuanYuC. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

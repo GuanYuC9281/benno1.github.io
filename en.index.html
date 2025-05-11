@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      var defaultLanguage ="en";
+    </script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <header class="header">
+        <a href="#" class="logo">GuanYuC.</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#hello"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#workexperience">Work Experience</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#future">Future Goals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Language Switcher -->
+            <li class="language-switcher">
+                <button id="language-toggle" type="button">🌐</button>
+                <ul id="language-menu">
+                    <li><a href="index.html">Chinese</a></li>
+                    <li><a href="en.index.html">English</a></li>
+                    <li><a href="ja.index.html">Japanese</a></li>
+                    <li><a href="de.index.html">German</a></li>
+                    <li><a href="vi.index.html">Vietnamese</a></li>
+                    <li><a href="es.index.html">Spanish</a></li>
+                </ul>
+            </li>
+        </nav>
+
+        <!-- Car Animation -->
+        <div class="car-animation">
+            <span style="font-size: 24px;">🦖</span>
+        </div>
+    </header>
+    
+    <section id="hello" class="hero">
+        <h1 class="glow">"Dare to Challenge, Achieve Excellence"</h1>
+        <h2>Hello~ I'm GuanYu Chen, welcome to my personal portfolio website</h2>
+        <h3>I am a <span class="typing"></span></h3>
+        <p>Focused on web front-end development, AI technology, data analysis, and ESG sustainability principles</p>
+    </section>  
+    
+    <section id="hello" class="hero">
+        <h3>Scroll down to learn more</h3>
+    </section>  
+    
+    <section id="about" class="hero">
+        <h2>About Me</h2>
+        <h3>I am GuanYu Chen, currently studying at Chinese Culture University, Department of Information Management</h3>
+        
+        <div class="about-container">
+            <!-- Left Image -->
+            <div class="profile-container">
+                <div class="image-slider">
+                    <img id="profile-img" src="images/4 (2).jpg" alt="Profile Image">
+                </div>
+            </div>
+    
+            <!-- Right Content -->
+            <div class="additional-content">
+                <ul>Skills & Experience</ul>
+                <ul>
+                    <li>
+                        Front-end Development: 2-3 years of development and project experience, proficient in ASP.NET MVC, C#, JavaScript, MS SQL, and related technologies.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        AI Technology: Currently an AI annotator at Berry AI, primarily responsible for image processing and machine learning statistics-related projects.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        ESG Technology: Completed an ESG introductory course during studies and independently produced a simplified ESG report.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Personality: Optimistic and calm, with critical thinking skills, passionate about challenges and learning, adept at problem-solving, and equipped with self-learning and teamwork abilities.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education" class="hero">
+        <h2>Education</h2>
+        <img src="images/edu.jpg" alt="Education" width="1000" height="auto">
+        <figcaption>Education Timeline</figcaption>
+    </section>
+
+    <section id="workexperience" class="hero">
+  <h2>Work Experience</h2>
+  <div class="timeline">
+
+    <!-- Test Engineer Intern -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/rainbow.png" alt="Test Engineer Intern">
+      </div>
+      <div class="timeline-content">
+        <h3>Company:  Marshall Islands Rainbow Technology Co., Ltd.</h3>  
+        <h3>Test Engineer Intern</h3>
+        <span class="date">2025/2 ~ 2025/8</span>
+        <p>Responsibilities include testing new features for the company's game products (front-end and back-end), conducting regression testing, black-box/white-box testing, writing test cases, and participating in requirement meetings.</p>
+      </div>
+    </div>
+
+    <!-- AI Annotation Specialist -->
+    <div class="timeline-item reverse">
+      <div class="timeline-image">
+        <img src="images/berryai.png" alt="AI Annotation Specialist">
+      </div>
+      <div class="timeline-content">
+        <h3>Company: Berry-AI</h3>
+        <h3>AI Annotation Specialist</h3>
+        <span class="date">2024/8 ~ 2024/12</span>
+        <p>Responsible for image annotation and supporting machine learning projects.</p>
+      </div>
+    </div>
+
+    <!-- Gogoro Store Assistant -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/gogoro.png" alt="Gogoro Store Assistant">
+      </div>
+      <div class="timeline-content">
+        <h3>Company: Gogoro Inc.</h3>
+        <h3>Store Assistant</h3>
+        <span class="date">2023/7 ~ 2024/3</span>
+        <p>Provided customer service, managed store operations, assisted in product sales and vehicle delivery.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+    <section id="certificates" class="hero">
+        <h2>Certificates</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="./images/ERP-GP.jpg" alt="Certificate 1">
+                <figcaption>ERP Software Application Specialist</figcaption>
+            </div>
+            <div class="image-item">
+                <img src="./images/ITS.jpg" alt="Certificate 2">
+                <figcaption>ITS Cybersecurity Core Competency</figcaption>
+            </div>
+            <div class="image-item">
+                <img src="./images/CISCO CCST.jpg" alt="Certificate 3">
+                <figcaption>CISCO CCST</figcaption>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+    
+        <!-- First Project: AI SoGood Stock Platform -->
+        <div class="project">
+            <div class="project-image">
+                <img src="images/sogood.png" alt="SoGood Stock Platform">
+            </div>
+            <div class="project-content">
+                <h3>📌 Project: SoGood Stock Platform (2023/9 - 2024/11)</h3>
+                <p>I was responsible for "copywriting" and "front-end web architecture design," completing the Model.View.Controller structure to ensure smooth website functionality and an intuitive user experience. Email authentication during login was implemented to prevent account misuse.</p>
+                <ul>Project Achievements:
+                    <li>✅ Developed a "discussion forum" feature with instant-expand product info and dynamic navigation for intuitive user interaction.</li>
+                    <li>✅ Added a "personalization" system, dynamically updating content based on user behavior, improving retention and conversion rates.</li>
+                    <li>✅ Designed a clean and seamless website, integrating visuals and functionality to enhance user experience.</li>
+                    <li>✅ Optimized core website structure for fast response and improved access stability.</li>
+                </ul>
+                <a href="https://sogood.works" target="_blank" class="btn">🔗 Website Link</a>
+                <a href="https://www.youtube.com/watch?v=GUaKKLdPOrs" target="_blank" class="btn youtube-button">▶️ Watch Video</a>
+                <button class="voice-button" data-text="SoGood Stock Platform is a stock-focused platform aiming to create an investment advisory, analysis, and beginner-friendly stock investment website, primarily developed using Visual Studio 2022 ASP.NET MVC, ChatGPT, and MS SQL.">🎤 Listen to Introduction</button>
+            </div>
+        </div>
+    
+        <!-- Second Project: Simplified ESG Report (Downloadable Word File) -->
+        <div class="project">
+            <div class="project-image">
+                <img src="images/ESG_report.png" alt="Simplified ESG Report">
+            </div>
+            <div class="project-content">
+                <h3>📌 Simplified ESG Report (Self-Made Version)</h3>
+                <p>A simplified ESG report suitable for corporate sustainability planning.</p>
+                <button class="voice-button" data-text="This is a self-made simplified ESG report for the Uni-President Enterprises Group (non-official version), providing a basic guide for corporate sustainability to assist in developing environmental, social, and governance strategies.">🎤 Listen to Introduction</button>
+            </div>
+        </div>
+    
+        <!-- Third Project: Under Development -->
+        <div class="project">
+            <div class="project-image">
+                <img src="images/coming_soon.webp" alt="Under Development">
+            </div>
+            <div class="project-content">
+                <h3>📌 New Project: Stay Tuned</h3>
+                <p>Currently developing a new project, stay tuned!</p>
+            </div>
+        </div>
+    
+    </section>
+    
+    <section id="future" class="hero">
+        <h2>Future Goals</h2>
+        <div class="timeline">
+            <!-- Cybersecurity (Slide in from Left) -->
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="images/cybersecurity.png" alt="Cybersecurity Development">
+                </div>
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Cybersecurity Development</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Learn penetration testing and network security management, become proficient with cybersecurity tools (e.g., Wireshark, Kali Linux) to ensure software system security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- AI Automation (Slide in from Right) -->
+            <div class="timeline-item">
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>AI Automation</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Explore AI applications in testing and data analysis, learn RPA automation techniques, and combine machine learning to enhance enterprise operational efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/ai_automation.png" alt="AI Automation">
+                </div>
+            </div>
+    
+            <!-- Software Testing (Slide in from Left) -->
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="images/software_testing.png" alt="Software Testing">
+                </div>
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Software Testing</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Learn automated testing frameworks (e.g., Selenium, JUnit), focus on functional, stress, and security testing to improve product stability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Python Self-Learning (Slide in from Right) -->
+            <div class="timeline-item">
+                <div class="timeline-content card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Python Language</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Deepen Python knowledge, master Django and Flask for backend development, and apply data analysis and AI model development to enhance programming skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/python_learning.png" alt="Python Self-Learning">
+                </div>
+            </div>
+            <!-- ESG Concept (Slide in from Left) -->
+            <div class="timeline-item">
+            <div class="timeline-image">
+        <img src="images/esg.png" alt="ESG Sustainability">
+             </div>
+              <div class="timeline-content card">
+               <div class="card-inner">
+                <div class="card-front">
+                  <h3>ESG Sustainability</h3>
+                  </div>
+                  <div class="card-back">
+                   <p>Understand corporate ESG (Environmental, Social, Governance) development, learn to apply data analysis and technology to support sustainable business strategies.</p>
+                  </div>
+                 </div>
+               </div>
+              </div>
+
+              <!-- Business Management (Slide in from Right) -->
+                <div class="timeline-item">
+    <div class="timeline-content card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h3>Business Management</h3>
+            </div>
+            <div class="card-back">
+                <p>Learn business management, marketing strategies, and data-driven decision-making, combining technology and innovative thinking to enhance competitiveness.</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-image">
+        <img src="images/business.png" alt="Business Management">
+    </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section id="contact">
+    <h2>Contact</h2>
+    <p class="calligraphy">Connecting innovation, creating the future. For any collaboration opportunities, feel free to reach out. Let's build a smarter future together! </p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100016934860213" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/GuanYuC9281/benno1.github.io.git" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:cben2400@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+            </section>
+
+    <footer style="text-align: center; padding: 20px;">
+           <p id="visit-counter">Views: 0</p>
+        <p>© 2025 GuanYuC. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

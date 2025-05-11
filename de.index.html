@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persönliche Profilseite</title>
+    <link rel="stylesheet" href="styles.css">
+     <script>
+      var defaultLanguage ="de";
+    </script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <header class="header">
+        <a href="#" class="logo">GuanYuC.</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#hello"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about">Über Mich</a></li>
+                <li><a href="#education">Bildung</a></li>
+                <li><a href="#workexperience">Berufserfahrung</a></li>
+                <li><a href="#certificates">Zertifikate</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#future">Zukunftsaussichten</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <li class="language-switcher">
+              <button id="language-toggle" type="button">🌐</button>
+              <ul id="language-menu">
+                <li><a href="index.html">中文</a></li>
+                <li><a href="en.index.html">English</a></li>
+                <li><a href="ja.index.html">日本語</a></li>
+                <li><a href="de.index.html">Deutsch</a></li>
+                <li><a href="vi.index.html">Tiếng Việt</a></li>
+                <li><a href="es.index.html">Español</a></li>
+              </ul>
+            </li>
+        </nav>
+        <div class="car-animation">
+            <span style="font-size: 24px;">🦖</span>
+        </div>
+    </header>
+
+    <section id="hello" class="hero">
+        <h1 class="glow">"Wage Herausforderungen, erreiche Exzellenz"</h1>
+        <h2>Hallo, ich bin GuanYuC. Willkommen auf meiner persönlichen Profilseite!</h2>
+        <h3>Ich bin ein <span class="typing"></span></h3>
+        <p>Spezialisiert auf Frontend-Entwicklung, KI-Technologie, Datenanalyse und ESG-Nachhaltigkeitskonzepte</p>
+    </section>
+
+    <section id="hello" class="hero">
+        <h3>Scrollen Sie nach unten, um mehr zu erfahren</h3>
+    </section>
+
+    <section id="about" class="hero">
+        <h2>Über Mich</h2>
+        <h3>Ich bin GuanYuC und studiere derzeit Informationsmanagement an der Chinese Culture University.</h3>
+        
+        <div class="about-container">
+            <div class="profile-container">
+                <div class="image-slider">
+                    <img id="profile-img" src="images/4 (2).jpg" alt="Profilbild">
+                </div>
+            </div>
+            <div class="additional-content">
+                <ul>Fähigkeiten & Erfahrung</ul>
+                <ul>
+                    <li>Frontend-Entwicklung: 2–3 Jahre Erfahrung in Entwicklung und Projekten, vertraut mit ASP.NET MVC, C#, JavaScript, MS SQL usw.</li>
+                </ul>
+                <ul>
+                    <li>KI-Technologie: Derzeit KI-Annotation Specialist im Berry AI Team, hauptsächlich verantwortlich für Bildverarbeitung und Machine-Learning-Statistiken.</li>
+                </ul>
+                <ul>
+                    <li>ESG-Technologie: ESG-Grundlagenkurs absolviert und eigenständig einen einfachen ESG-Bericht erstellt.</li>
+                </ul>
+                <ul>
+                    <li>Persönlichkeit: Optimistisch, ruhig, empathisch, liebt Herausforderungen und Lernen, lösungsorientiert, mit selbstständigen Lernfähigkeiten und Teamfähigkeit.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="hero">
+        <h2>Bildung</h2>
+        <img src="images/edu.jpg" alt="Bildung" width="1000" height="auto">
+        <figcaption>Bildung Ablaufdiagramm</figcaption>
+    </section>
+
+    <section id="workexperience" class="hero">
+  <h2>Berufserfahrung</h2>
+  <div class="timeline">
+
+    <!-- Praktikant als Testingenieur -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/rainbow.png" alt="Praktikant als Testingenieur">
+      </div>
+      <div class="timeline-content">
+        <h3>Firmenname: Marshallinseln Rainbow Technology GmbH</h3>  
+        <h3>Praktikant als Testingenieur</h3>
+        <span class="date">2025/2 ~ 2025/8</span>
+        <p>Verantwortlich für die Prüfung neuer Funktionen von Spieleprodukten des Unternehmens (Frontend und Backend), Regressionstests, Blackbox-/Whitebox-Tests, Erstellung von Testfällen und Teilnahme an Anforderungsbesprechungen.</p>
+      </div>
+    </div>
+
+    <!-- KI-Annotierungspezialist -->
+    <div class="timeline-item reverse">
+      <div class="timeline-image">
+        <img src="images/berryai.png" alt="KI-Annotierungspezialist">
+      </div>
+      <div class="timeline-content">
+        <h3>Firmenname: Berry-AI</h3>
+        <h3>KI-Annotierungspezialist</h3>
+        <span class="date">2024/8 ~ 2024/12</span>
+        <p>Verantwortlich für Bildannotierungen und Unterstützung von Machine-Learning-Projekten.</p>
+      </div>
+    </div>
+
+    <!-- Gogoro Filialassistent -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/gogoro.png" alt="Gogoro Filialassistent">
+      </div>
+      <div class="timeline-content">
+        <h3>Firmenname: Gogoro Inc.</h3>
+        <h3>Filialassistent</h3>
+        <span class="date">2023/7 ~ 2024/3</span>
+        <p>Kundenbetreuung, Filialverwaltung, Unterstützung beim Verkauf und bei der Fahrzeugauslieferung.</p>
+      </div>
+    </div>
+
+  </div>
+</section><section id="certificates" class="hero">
+    <h2>Zertifikate</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="./images/ERP-GP.jpg" alt="Zertifikat 1">
+            <figcaption>ERP-Software-Anwendungsspezialist</figcaption>
+        </div>
+        <div class="image-item">
+            <img src="./images/ITS.jpg" alt="Zertifikat 2">
+            <figcaption>ITS Kernkompetenz Informationssicherheit</figcaption>
+        </div>
+        <div class="image-item">
+            <img src="./images/CISCO CCST.jpg" alt="Zertifikat 3">
+            <figcaption>CISCO CCST Zertifikat</figcaption>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/sogood.png" alt="Sogood Aktienplattform">
+        </div>
+        <div class="project-content">
+            <h3>📌 Projekt: Sogood Aktieninvestmentplattform (Sep 2023 ~ Nov 2024)</h3>
+            <p>Ich war für "Textverfassung" und "Frontend-Architekturdesign" zuständig, um das Model-View-Controller zu erstellen und eine reibungslose und intuitive Benutzererfahrung zu gewährleisten. Das E-Mail-Verifizierungssystem verhindert doppelte Registrierung und Missbrauch von Konten.</p>
+            <ul>Projekt-Highlights:
+                <li>✅ Entwicklung der Funktion "Diskussionsforum", inklusive sofortiger Produktinformationen und dynamischer Navigation für intuitive Bedienung.</li>
+                <li>✅ Einführung eines "Personalisierungssystems", dynamische Aktualisierung von Inhalten basierend auf Nutzerverhalten zur Steigerung der Bindung und Konversionsrate.</li>
+                <li>✅ Schlichtes und flüssiges Design zur Verbesserung der visuellen und operativen Benutzererfahrung.</li>
+                <li>✅ Optimierung der Kernstruktur der Website für schnellere Ladezeiten und verbesserte Stabilität.</li>
+            </ul>
+            <a href="https://sogood.works" target="_blank" class="btn">🔗 Website besuchen</a>
+            <a href="https://www.youtube.com/watch?v=GUaKKLdPOrs" target="_blank" class="btn youtube-button">▶️ Video ansehen</a>
+            <button class="voice-button" data-text="Die Sogood Aktienplattform richtet sich an Einsteiger, bietet Anlageratschläge und Analysen. Entwickelt mit Visual Studio 2022 ASP.NET MVC, ChatGPT und MS SQL.">🎤 Sprachvorstellung</button>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/ESG_report.png" alt="ESG Bericht">
+        </div>
+        <div class="project-content">
+            <h3>📌 ESG Einfacher Bericht (Eigenproduktion)</h3>
+            <p>Ein einfacher ESG-Bericht für Unternehmen, um nachhaltige Entwicklungsstrategien zu fördern.</p>
+            <button class="voice-button" data-text="Dies ist ein selbst erstellter vereinfachter ESG-Bericht (inoffizielle Version), der als Grundlage für nachhaltige Strategien von Unternehmen dient.">🎤 Sprachvorstellung</button>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/coming_soon.webp" alt="In Arbeit">
+        </div>
+        <div class="project-content">
+            <h3>📌 Neues Projekt: Demnächst verfügbar</h3>
+            <p>Ein neues Projekt ist in der Entwicklung. Bitte bleiben Sie dran!</p>
+        </div>
+    </div>
+</section>
+
+<section id="future" class="hero">
+    <h2>Zukunftsaussichten</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/cybersecurity.png" alt="Cybersecurity-Entwicklung">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Cybersecurity-Entwicklung</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Lernen von Penetrationstests und Netzwerksicherheitsmanagement, Vertrautheit mit Tools wie Wireshark und Kali Linux, um die Systemsicherheit zu gewährleisten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>KI-Automatisierung</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Erkundung von KI-Anwendungen in Test- und Datenanalyse, Erlernen von RPA-Technologien, kombiniert mit maschinellem Lernen zur Effizienzsteigerung.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-image">
+                <img src="images/ai_automation.png" alt="KI-Automatisierung">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/software_testing.png" alt="Softwaretest">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Softwaretest</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Erlernen von Testautomatisierungs-Frameworks wie Selenium und JUnit, Fokus auf Funktionalität, Belastungstests und Sicherheitstests zur Verbesserung der Produktstabilität.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Python-Programmierung</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Vertieftes Lernen von Python, Beherrschung der Backend-Entwicklung mit Django und Flask sowie Anwendung auf Datenanalyse und KI-Modellentwicklung.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-image">
+                <img src="images/python_learning.png" alt="Python Lernen">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/esg.png" alt="ESG Nachhaltigkeit">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>ESG Nachhaltigkeit</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Verständnis der Entwicklung von ESG (Umwelt, Soziales und Unternehmensführung) in Unternehmen und Anwendung von Datenanalyse und Technologie zur Unterstützung nachhaltiger Strategien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p class="calligraphy">Innovation verbinden, gemeinsam die Zukunft gestalten. Jede Kooperationsmöglichkeit ist willkommen – lassen Sie uns gemeinsam eine intelligentere Zukunft schaffen! </p>
+<div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100016934860213" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/GuanYuC9281/benno1.github.io.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:cben2400@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+</section>
+
+<footer style="text-align: center; padding: 20px;">
+    <p id="visit-counter">Besuche: 0</p>
+    © 2025 GuanYuC. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân</title>
+    <link rel="stylesheet" href="styles.css">
+     <script>
+      var defaultLanguage ="vi";
+    </script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <header class="header">
+        <a href="#" class="logo">GuanYuC.</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#hello"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about">Về Tôi</a></li>
+                <li><a href="#education">Học Vấn</a></li>
+                <li><a href="#workexperience">Kinh Nghiệm Làm Việc</a></li>
+                <li><a href="#certificates">Chứng Chỉ</a></li>
+                <li><a href="#portfolio">Danh Mục</a></li>
+                <li><a href="#future">Triển Vọng Tương Lai</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+            <li class="language-switcher">
+              <button id="language-toggle" type="button">🌐</button>
+              <ul id="language-menu">
+                <li><a href="index.html">中文</a></li>
+                <li><a href="en.index.html">English</a></li>
+                <li><a href="ja.index.html">日本語</a></li>
+                <li><a href="de.index.html">Deutsch</a></li>
+                <li><a href="vi.index.html">Tiếng Việt</a></li>
+                <li><a href="es.index.html">Spanish</a></li>
+              </ul>
+            </li>
+        </nav>
+        <div class="car-animation">
+            <span style="font-size: 24px;">🦖</span>
+        </div>
+    </header>
+
+    <section id="hello" class="hero">
+        <h1 class="glow">"Dám thách thức, đạt được sự xuất sắc"</h1>
+        <h2>Xin chào, tôi là GuanYuC. Chào mừng bạn đến với trang cá nhân của tôi!</h2>
+        <h3>Tôi là một <span class="typing"></span></h3>
+        <p>Chuyên về Phát triển Frontend, Công nghệ AI, Phân tích Dữ liệu và Khái niệm ESG bền vững</p>
+    </section>
+
+    <section id="hello" class="hero">
+        <h3>Cuộn xuống để khám phá thêm</h3>
+    </section>
+
+    <section id="about" class="hero">
+        <h2>Về Tôi</h2>
+        <h3>Tôi là GuanYuC, hiện đang học tại Đại học Văn hóa Trung Hoa, chuyên ngành Quản lý Thông tin.</h3>
+        
+        <div class="about-container">
+            <div class="profile-container">
+                <div class="image-slider">
+                    <img id="profile-img" src="images/4 (2).jpg" alt="Ảnh đại diện">
+                </div>
+            </div>
+            <div class="additional-content">
+                <ul>Kỹ Năng & Kinh Nghiệm</ul>
+                <ul>
+                    <li>Phát triển Frontend: Có 2–3 năm kinh nghiệm dự án và phát triển, thành thạo ASP.NET MVC, C#, JavaScript, MS SQL.</li>
+                </ul>
+                <ul>
+                    <li>Công nghệ AI: Là Nhân viên Ghi nhãn AI của đội Berry AI, chịu trách nhiệm xử lý hình ảnh và phân tích thống kê học máy.</li>
+                </ul>
+                <ul>
+                    <li>Công nghệ ESG: Đã hoàn thành khóa học giới thiệu ESG và tự lập báo cáo ESG đơn giản.</li>
+                </ul>
+                <ul>
+                    <li>Tính cách: Lạc quan, điềm tĩnh, có khả năng tư duy thay đổi, yêu thích thử thách và học hỏi, giỏi giải quyết vấn đề, tự học tốt và hợp tác nhóm hiệu quả.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="hero">
+        <h2>Học Vấn</h2>
+        <img src="images/edu.jpg" alt="Học vấn" width="1000" height="auto">
+        <figcaption>Sơ đồ học tập</figcaption>
+    </section>
+
+    <section id="workexperience" class="hero">
+  <h2>Kinh nghiệm làm việc</h2>
+  <div class="timeline">
+
+    <!-- Thực tập sinh kỹ sư kiểm thử -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/rainbow.png" alt="Thực tập sinh kỹ sư kiểm thử">
+      </div>
+      <div class="timeline-content">
+        <h3>Tên Công Ty: Công ty Công nghệ Rainbow Quần đảo Marshall</h3>  
+        <h3>Thực tập sinh kỹ sư kiểm thử</h3>
+        <span class="date">2025/2 ~ 2025/8</span>
+        <p>Phụ trách kiểm thử tính năng mới cho sản phẩm trò chơi (Frontend/Backend), kiểm thử hồi quy, kiểm thử hộp đen/trắng, viết trường hợp kiểm thử, tham gia cuộc họp yêu cầu kiểm thử.</p>
+      </div>
+    </div>
+
+    <!-- Chuyên viên chú thích dữ liệu AI -->
+    <div class="timeline-item reverse">
+      <div class="timeline-image">
+        <img src="images/berryai.png" alt="Chuyên viên chú thích dữ liệu AI">
+      </div>
+      <div class="timeline-content">
+        <h3>Tên Công Ty: Berry-AI</h3>
+        <h3>Chuyên viên chú thích dữ liệu AI</h3>
+        <span class="date">2024/8 ~ 2024/12</span>
+        <p>Phụ trách chú thích hình ảnh và hỗ trợ các dự án machine learning.</p>
+      </div>
+    </div>
+
+    <!-- Trợ lý cửa hàng Gogoro -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/gogoro.png" alt="Trợ lý cửa hàng Gogoro">
+      </div>
+      <div class="timeline-content">
+        <h3>Tên Công Ty: Gogoro Inc.</h3>
+        <h3>Trợ lý cửa hàng</h3>
+        <span class="date">2023/7 ~ 2024/3</span>
+        <p>Hỗ trợ khách hàng, quản lý cửa hàng, hỗ trợ bán hàng và bàn giao xe.</p>
+      </div>
+    </div>
+
+  </div>
+</section><section id="certificates" class="hero">
+    <h2>Chứng Chỉ</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="./images/ERP-GP.jpg" alt="Chứng chỉ 1">
+            <figcaption>Chuyên Gia Ứng Dụng Phần Mềm ERP</figcaption>
+        </div>
+        <div class="image-item">
+            <img src="./images/ITS.jpg" alt="Chứng chỉ 2">
+            <figcaption>Kỹ năng cốt lõi An toàn Thông tin ITS</figcaption>
+        </div>
+        <div class="image-item">
+            <img src="./images/CISCO CCST.jpg" alt="Chứng chỉ 3">
+            <figcaption>Chứng chỉ CISCO CCST</figcaption>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>Danh Mục</h2>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/sogood.png" alt="Sogood - Nền tảng đầu tư cổ phiếu">
+        </div>
+        <div class="project-content">
+            <h3>📌 Dự Án: Nền tảng đầu tư Sogood (09/2023 ~ 11/2024)</h3>
+            <p>Tôi phụ trách "viết nội dung" và "thiết kế cấu trúc front-end", hoàn thiện Model-View-Controller đảm bảo vận hành trơn tru và giao diện trực quan cho người dùng. Xác thực email giúp ngăn chặn đăng ký trùng lặp và lạm dụng tài khoản.</p>
+            <ul>Thành Tựu:
+                <li>✅ Phát triển chức năng "Diễn đàn thảo luận", hỗ trợ popup thông tin sản phẩm và điều hướng động.</li>
+                <li>✅ Thêm hệ thống "Cá nhân hóa", cập nhật nội dung động dựa trên hành vi người dùng.</li>
+                <li>✅ Thiết kế website đơn giản, mượt mà, tối ưu hóa trải nghiệm người dùng.</li>
+                <li>✅ Tối ưu hóa cấu trúc lõi trang web, cải thiện tốc độ tải và độ ổn định.</li>
+            </ul>
+            <a href="https://sogood.works" target="_blank" class="btn">🔗 Truy cập Website</a>
+            <a href="https://www.youtube.com/watch?v=GUaKKLdPOrs" target="_blank" class="btn youtube-button">▶️ Xem Video</a>
+            <button class="voice-button" data-text="Sogood là nền tảng đầu tư cổ phiếu thân thiện cho người mới, cung cấp phân tích và đề xuất đầu tư. Phát triển bằng Visual Studio 2022 ASP.NET MVC, ChatGPT và MS SQL.">🎤 Giới thiệu bằng âm thanh</button>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/ESG_report.png" alt="Báo cáo ESG">
+        </div>
+        <div class="project-content">
+            <h3>📌 Báo cáo ESG Đơn Giản (Tự làm)</h3>
+            <p>Một báo cáo ESG đơn giản hỗ trợ doanh nghiệp xây dựng chiến lược phát triển bền vững.</p>
+            <button class="voice-button" data-text="Đây là báo cáo ESG tự soạn (phiên bản không chính thức), nhằm hỗ trợ doanh nghiệp trong việc lập kế hoạch phát triển bền vững.">🎤 Giới thiệu bằng âm thanh</button>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/coming_soon.webp" alt="Đang phát triển">
+        </div>
+        <div class="project-content">
+            <h3>📌 Dự Án Mới: Sắp Ra Mắt</h3>
+            <p>Dự án mới đang được phát triển. Hãy cùng chờ đón!</p>
+        </div>
+    </div>
+</section>
+
+<section id="future" class="hero">
+    <h2>Triển Vọng Tương Lai</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/cybersecurity.png" alt="Phát triển An ninh mạng">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Phát triển An ninh mạng</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Học về kiểm thử xâm nhập và quản lý an ninh mạng, thành thạo công cụ như Wireshark, Kali Linux để bảo vệ hệ thống phần mềm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Tự động hóa AI</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Khám phá ứng dụng AI trong kiểm thử và phân tích dữ liệu, học công nghệ tự động hóa RPA, kết hợp học máy để nâng cao hiệu quả vận hành doanh nghiệp.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-image">
+                <img src="images/ai_automation.png" alt="Tự động hóa AI">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/software_testing.png" alt="Kiểm thử phần mềm">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Kiểm thử phần mềm</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Học các framework kiểm thử tự động như Selenium, JUnit; tập trung vào kiểm thử chức năng, kiểm thử tải và kiểm thử bảo mật để nâng cao độ ổn định sản phẩm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Học lập trình Python</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Học chuyên sâu Python, thành thạo phát triển Backend với Django, Flask; ứng dụng vào phân tích dữ liệu và phát triển mô hình AI.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-image">
+                <img src="images/python_learning.png" alt="Học Python">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/esg.png" alt="Kinh doanh Bền vững ESG">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Kinh doanh Bền vững ESG</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Hiểu biết về sự phát triển ESG (Môi trường, Xã hội và Quản trị) và ứng dụng phân tích dữ liệu để hỗ trợ chiến lược bền vững doanh nghiệp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="contact" >
+    <h2>Liên Hệ</h2>
+    <p class="calligraphy">Kết nối đổi mới, cùng nhau kiến tạo tương lai. Mọi cơ hội hợp tác đều được hoan nghênh – hãy cùng nhau xây dựng một tương lai thông minh hơn! </p>
+<div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100016934860213" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/GuanYuC9281/benno1.github.io.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:cben2400@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+</section>
+
+<footer style="text-align: center; padding: 20px;">
+    <p id="visit-counter">Lượt truy cập: 0</p>
+    © 2025 GuanYuC. Đã đăng ký bản quyền.
+</footer>
+
+</body>
+</html>

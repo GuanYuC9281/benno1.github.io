@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人プロフィールサイト</title>
+    <link rel="stylesheet" href="styles.css">
+     <script>
+      var defaultLanguage ="ja";
+    </script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <header class="header">
+        <a href="#" class="logo">GuanYuC.</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#hello"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about">私について</a></li>
+                <li><a href="#education">学歴</a></li>
+                <li><a href="#workexperience">職務経験</a></li>
+                <li><a href="#certificates">資格</a></li>
+                <li><a href="#portfolio">ポートフォリオ</a></li>
+                <li><a href="#future">将来展望</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+            <li class="language-switcher">
+              <button id="language-toggle" type="button">🌐</button>
+              <ul id="language-menu">
+                <li><a href="index.html">中文</a></li>
+                <li><a href="en.index.html">English</a></li>
+                <li><a href="ja.index.html">日本語</a></li>
+                <li><a href="de.index.html">Deutsch</a></li>
+                <li><a href="vi.index.html">Tiếng Việt</a></li>
+                <li><a href="es.index.html">Español</a></li>
+              </ul>
+            </li>
+        </nav>
+        <div class="car-animation">
+            <span style="font-size: 24px;">🦖</span>
+        </div>
+    </header>
+
+    <section id="hello" class="hero">
+        <h1 class="glow">"挑戦し、卓越を達成する"</h1>
+        <h2>こんにちは、陳冠宇（GuanYuC）です。私の個人プロフィールサイトへようこそ！</h2>
+        <h3>私は<span class="typing"></span></h3>
+        <p>フロントエンド開発、AI技術、データ分析、ESG持続可能性に注力</p>
+    </section>
+
+    <section id="hello" class="hero">
+        <h3>スクロールして詳細を見る</h3>
+    </section>
+
+    <section id="about" class="hero">
+        <h2>私について</h2>
+        <h3>私は陳冠宇（GuanYuC）です。現在、中国文化大学情報管理学科に在籍しています。</h3>
+        
+        <div class="about-container">
+            <div class="profile-container">
+                <div class="image-slider">
+                    <img id="profile-img" src="images/4 (2).jpg" alt="プロフィール画像">
+                </div>
+            </div>
+            <div class="additional-content">
+                <ul>スキル & 経験</ul>
+                <ul>
+                    <li>フロントエンド開発：2〜3年の開発およびプロジェクト経験。ASP.NET MVC、C#、JavaScript、MS SQLに精通。</li>
+                </ul>
+                <ul>
+                    <li>AI技術：Berry AIチームのAIアノテーターとして、主に画像処理と機械学習統計プロジェクトを担当。</li>
+                </ul>
+                <ul>
+                    <li>ESG技術：学業過程でESG入門講座を履修し、簡易ESGレポートを自主的に作成。</li>
+                </ul>
+                <ul>
+                    <li>性格：楽観的で冷静、共感力があり、挑戦と学習を愛し、問題解決力を備え、自己学習およびチーム協力に長けている。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="hero">
+        <h2>学歴</h2>
+        <img src="images/edu.jpg" alt="学歴" width="1000" height="auto">
+        <figcaption>学歴フローチャート</figcaption>
+    </section>
+
+    <section id="workexperience" class="hero">
+  <h2>職務経験</h2>
+  <div class="timeline">
+
+    <!-- テストエンジニアインターン -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/rainbow.png" alt="テストエンジニアインターン">
+      </div>
+      <div class="timeline-content">
+        <h3>会社名（かいしゃめい）: マーシャル諸島 レインボーテクノロジー株式会社</h3>  
+        <h3>テストエンジニア インターン</h3>
+        <span class="date">2025/2 ~ 2025/8</span>
+        <p>会社のゲーム製品（フロントエンド・バックエンド）の新機能テスト、リグレッションテスト、ブラックボックス／ホワイトボックステスト、テストケース作成、要求ミーティングへの参加を担当。</p>
+      </div>
+    </div>
+
+    <!-- AIアノテーションスペシャリスト -->
+    <div class="timeline-item reverse">
+      <div class="timeline-image">
+        <img src="images/berryai.png" alt="AIアノテーションスペシャリスト">
+      </div>
+      <div class="timeline-content">
+        <h3>会社名（かいしゃめい）: Berry-AI</h3>
+        <h3>AIアノテーションスペシャリスト</h3>
+        <span class="date">2024/8 ~ 2024/12</span>
+        <p>画像のアノテーション業務および機械学習プロジェクトのサポートを担当。</p>
+      </div>
+    </div>
+
+    <!-- Gogoro店舗アシスタント -->
+    <div class="timeline-item">
+      <div class="timeline-image">
+        <img src="images/gogoro.png" alt="Gogoro店舗アシスタント">
+      </div>
+      <div class="timeline-content">
+        <h3>会社名（かいしゃめい）: Gogoro株式会社</h3>
+        <h3>店舗アシスタント</h3>
+        <span class="date">2023/7 ~ 2024/3</span>
+        <p>顧客対応、店舗運営管理、商品販売および納車支援を担当。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="certificates" class="hero">
+    <h2>資格</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="./images/ERP-GP.jpg" alt="資格1">
+            <figcaption>ERPソフトウェアアプリケーションスペシャリスト</figcaption>
+        </div>
+        <div class="image-item">
+            <img src="./images/ITS.jpg" alt="資格2">
+            <figcaption>ITS情報セキュリティコアスキル</figcaption>
+        </div>
+        <div class="image-item">
+            <img src="./images/CISCO CCST.jpg" alt="資格3">
+            <figcaption>CISCO CCST認定</figcaption>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>ポートフォリオ</h2>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/sogood.png" alt="Sogoodストック投資プラットフォーム">
+        </div>
+        <div class="project-content">
+            <h3>📌 プロジェクト：Sogood株式投資プラットフォーム（2023年9月〜2024年11月）</h3>
+            <p>私は「コピーライティング」と「フロントエンドアーキテクチャ設計」を担当し、Model-View-Controllerの作成を完了して、スムーズな機能運用と直感的なユーザー体験を実現しました。登録時のEmail認証により、アカウントの重複登録と悪用を防止しました。</p>
+            <ul>プロジェクト成果:
+                <li>✅ 「ディスカッションフォーラム」機能を開発し、製品情報ポップアップや動的ナビゲーションを追加して操作性を向上。</li>
+                <li>✅ 「パーソナライズ」システムを追加し、ユーザー行動に基づいてコンテンツを動的更新、リテンション率とコンバージョン率を向上。</li>
+                <li>✅ シンプルでスムーズなデザインにより、視覚と操作性を一体化し、ユーザー体験を向上。</li>
+                <li>✅ ウェブサイトのコア構造を最適化し、応答速度と安定性を向上。</li>
+            </ul>
+            <a href="https://sogood.works" target="_blank" class="btn">🔗 サイトを見る</a>
+            <a href="https://www.youtube.com/watch?v=GUaKKLdPOrs" target="_blank" class="btn youtube-button">▶️ 動画を見る</a>
+            <button class="voice-button" data-text="Sogood株式投資プラットフォームは初心者向けの投資提案・分析機能を備えたストック投資サイトです。Visual Studio 2022 ASP.NET MVC、ChatGPT、MS SQLを使用して開発しました。">🎤 音声紹介</button>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/ESG_report.png" alt="ESG簡易レポート">
+        </div>
+        <div class="project-content">
+            <h3>📌 ESG簡易レポート（自作版）</h3>
+            <p>企業の持続可能な開発プランニングに役立つ簡易版ESGレポートです。</p>
+            <button class="voice-button" data-text="これは統一企業グループ向けに作成した非公式版の簡易ESGレポートであり、企業のESG戦略策定のための基本ガイドラインを提供します。">🎤 音声紹介</button>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-image">
+            <img src="images/coming_soon.webp" alt="開発中">
+        </div>
+        <div class="project-content">
+            <h3>📌 新プロジェクト：近日公開</h3>
+            <p>新しいプロジェクトを開発中です。乞うご期待！</p>
+        </div>
+    </div>
+</section>
+
+<section id="future" class="hero">
+    <h2>将来展望</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/cybersecurity.png" alt="サイバーセキュリティ開発">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>サイバーセキュリティ開発</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>ペネトレーションテスト、ネットワークセキュリティ管理を学び、WiresharkやKali Linuxなどのツールを習得し、ソフトウェアシステムの安全性を確保。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>AI自動化</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>テストとデータ分析におけるAIの応用を探求し、RPA自動化技術を学び、機械学習と組み合わせて企業運営の効率化を図る。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-image">
+                <img src="images/ai_automation.png" alt="AI自動化">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/software_testing.png" alt="ソフトウェアテスト">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>ソフトウェアテスト</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Selenium、JUnitなどのテスト自動化フレームワークを学び、機能テスト、ストレステスト、セキュリティテストに注力し、製品の安定性を向上。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Pythonプログラミング</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Pythonを深く学び、DjangoやFlaskを用いたバックエンド開発を習得し、データ分析とAIモデル開発に応用してプログラミング能力を向上。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-image">
+                <img src="images/python_learning.png" alt="Python自己学習">
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-image">
+                <img src="images/esg.png" alt="ESG持続可能経営">
+            </div>
+            <div class="timeline-content card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>ESG持続可能経営</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>企業のESG（環境、社会、ガバナンス）発展について理解を深め、データ分析とテクノロジーを活用して企業の持続可能戦略を支援。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><section id="contact" >
+    <h2>お問い合わせ</h2>
+   <p class="calligraphy">イノベーションをつなぎ、未来を共創しましょう。あらゆる協業の機会を歓迎します。一緒によりスマートな未来を築きましょう！</p>
+    <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100016934860213" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/r__9281/?hl=zh-tw" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/GuanYuC9281/benno1.github.io.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:cben2400@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+</section>
+
+<footer style="text-align: center; padding: 20px;">
+    <p id="visit-counter">訪問回数: 0</p>
+    © 2025 GuanYuC. All rights reserved.
+</footer>
+
+</body>
+</html>
