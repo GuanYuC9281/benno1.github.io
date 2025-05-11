@@ -761,11 +761,46 @@ section.active {
 }
 
 /* 響應式設計 */
+/* 這是電腦版（預設） */
+.menu-toggle {
+    display: none; /* 電腦版隱藏漢堡 */
+}
+
+/* 手機版才顯示 */
 @media (max-width: 768px) {
-    .timeline-item {
-        flex-direction: column !important;
-        align-items: center;
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px; /* header 高度 */
+        right: 0;
+        width: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
         text-align: center;
+        margin: 10px 0;
+    }
+
+    .language-switcher {
+        text-align: center;
+        margin-top: 10px;
     }
 }
 
@@ -785,89 +820,4 @@ section.active {
     max-width: 80%;  /* 設定最大寬度，避免文字過長 */
 }
 
-/* --- 響應式設計開始 --- */
 
-/* ========== 手機版 (max-width: 768px) ========== */
-@media (max-width: 768px) {
-  nav.navbar ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    height: auto;
-  }
-
-  nav.navbar ul li {
-    margin: 10px 0;
-  }
-
-  .logo {
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  .language-switcher {
-    margin-top: 10px;
-  }
-
-  #backgroundCanvas {
-    margin-top: 80px; /* 預留上方選單位置 */
-  }
-
-  .hero {
-    margin-top: 100px; /* 讓內容往下排 */
-    padding: 60px 15px;
-  }
-
-  section h1, section h2, section h3, section p {
-    text-align: center;
-    font-size: 90%;
-  }
-}
-
-/* ========== 平板版 (max-width: 992px) ========== */
-@media (max-width: 992px) {
-  .image-container {
-    grid-template-columns: repeat(2, 1fr); /* 原本3欄，平板改成2欄 */
-    gap: 15px;
-  }
-
-  .timeline-content {
-    padding: 20px;
-    font-size: 95%;
-  }
-
-  .timeline-image img {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-/* ========== 小筆電版 (max-width: 1200px) ========== */
-@media (max-width: 1200px) {
-  header.header {
-    padding: 10px 20px;
-  }
-
-  .logo {
-    font-size: 24px;
-  }
-
-  nav.navbar ul li {
-    margin: 0 10px;
-  }
-
-  .hero {
-    padding: 80px 30px;
-  }
-
-  section h1, section h2, section h3, section p {
-    font-size: 95%;
-  }
-}
