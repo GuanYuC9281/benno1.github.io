@@ -787,108 +787,87 @@ section.active {
 
 /* --- 響應式設計開始 --- */
 
-/* 手機版 (最大768px) */
+/* ========== 手機版 (max-width: 768px) ========== */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav.navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: auto;
+  }
 
-    nav ul li {
-        margin: 8px 0;
-    }
+  nav.navbar ul li {
+    margin: 10px 0;
+  }
 
-    .hero h1, .hero h2, .hero h3, .hero p {
-        font-size: 90%;
-        text-align: center;
-    }
+  .logo {
+    font-size: 20px;
+    padding: 10px;
+  }
 
-    .timeline {
-        flex-direction: column;
-    }
+  .language-switcher {
+    margin-top: 10px;
+  }
 
-    .timeline-item {
-        flex-direction: column;
-        text-align: center;
-    }
+  #backgroundCanvas {
+    margin-top: 80px; /* 預留上方選單位置 */
+  }
 
-    .timeline-image, .timeline-content {
-        width: 100%;
-    }
+  .hero {
+    margin-top: 100px; /* 讓內容往下排 */
+    padding: 60px 15px;
+  }
 
-    .image-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .car-animation {
-        display: none;
-    }
+  section h1, section h2, section h3, section p {
+    text-align: center;
+    font-size: 90%;
+  }
 }
 
-/* 平板版 (769px ~ 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
-    nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/* ========== 平板版 (max-width: 992px) ========== */
+@media (max-width: 992px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr); /* 原本3欄，平板改成2欄 */
+    gap: 15px;
+  }
 
-    nav ul li {
-        margin: 5px 10px;
-    }
+  .timeline-content {
+    padding: 20px;
+    font-size: 95%;
+  }
 
-    .hero h1, .hero h2, .hero h3, .hero p {
-        font-size: 95%;
-    }
-
-    .timeline {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .timeline-item {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .timeline-image, .timeline-content {
-        width: 100%;
-    }
-
-    .image-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .timeline-image img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
-/* 小筆電版 (993px ~ 1200px) */
-@media (min-width: 993px) and (max-width: 1200px) {
-    nav ul {
-        justify-content: space-around;
-    }
+/* ========== 小筆電版 (max-width: 1200px) ========== */
+@media (max-width: 1200px) {
+  header.header {
+    padding: 10px 20px;
+  }
 
-    nav ul li {
-        margin: 0 15px;
-    }
+  .logo {
+    font-size: 24px;
+  }
 
-    .hero h1, .hero h2, .hero h3, .hero p {
-        font-size: 100%;
-    }
+  nav.navbar ul li {
+    margin: 0 10px;
+  }
 
-    .timeline {
-        flex-direction: column;
-        align-items: center;
-    }
+  .hero {
+    padding: 80px 30px;
+  }
 
-    .timeline-item {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .timeline-image, .timeline-content {
-        width: 45%;
-    }
-
-    .image-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  section h1, section h2, section h3, section p {
+    font-size: 95%;
+  }
 }
