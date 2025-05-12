@@ -852,5 +852,120 @@ section.active {
     margin: 0 auto;  /* 讓文字更居中 */
     max-width: 80%;  /* 設定最大寬度，避免文字過長 */
 }
+/* === 響應式設定開始 === */
 
+/* 手機版（螢幕小於等於768px） */
+@media (max-width: 768px) {
+    /* 漢堡選單按鈕顯示 */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* 原本的 navbar ul 要隱藏，點漢堡才展開 */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 10px;
+        z-index: 999;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* 語言切換按鈕置中 */
+    .language-switcher {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* 關於我區塊圖片與文字改為上下排列 */
+    .about-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .profile-container,
+    .additional-content {
+        max-width: 100%;
+    }
+
+    /* 證照圖片排列改成單排 */
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-item {
+        width: 90%;
+        height: auto;
+    }
+
+    /* 工作經驗區塊強制上下排列 */
+    .timeline-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .timeline-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* 作品展示區塊調整 */
+    .project {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+/* 平板版（螢幕小於等於992px） */
+@media (max-width: 992px) {
+    /* 保持 flex，稍微收窄一點 */
+    .about-container {
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+
+    .profile-container,
+    .additional-content {
+        max-width: 100%;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+}
+
+/* 小筆電版（螢幕小於等於1200px） */
+@media (max-width: 1200px) {
+    /* 小筆電可以讓 about 區塊稍微緊湊一點 */
+    .about-container {
+        padding: 50px 30px;
+    }
+
+    .project {
+        width: 80%;
+        margin: 30px auto;
+    }
+}
+
+/* === 響應式設定結束 === */
 
