@@ -26,43 +26,37 @@
 <body>
     <canvas id="backgroundCanvas"></canvas>
     <header class="header">
-        <a href="#" class="logo">GuanYuC.</a>
-       <nav class="navbar" id="navbar-menu">
-        <button class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i> <!-- 三條線 -->
-        </button>
-    <ul>
-        <li><a href="#hello"><i class="fas fa-home"></i></a></li>
-        <li><a href="#about">關於我</a></li>
-        <li><a href="#education">學歷</a></li>
-        <li><a href="#workexperience">工作經驗</a></li>
-        <li><a href="#certificates">證照</a></li>
-        <li><a href="#portfolio">作品展示</a></li>
-        <li><a href="#future">未來展望</a></li>
-        <li><a href="#contact">聯絡方式</a></li>
+  <a href="#" class="logo">GuanYuC.</a>
+
+  <!-- 漢堡選單按鈕 -->
+  <button id="menu-toggle" class="menu-toggle">☰</button>
+
+  <nav class="navbar">
+    <ul id="navbar-menu">
+      <li><a href="#hello"><i class="fas fa-home"></i></a></li>
+      <li><a href="#about">關於我</a></li>
+      <li><a href="#education">學歷</a></li>
+      <li><a href="#workexperience">工作經驗</a></li>
+      <li><a href="#certificates">證照</a></li>
+      <li><a href="#portfolio">作品展示</a></li>
+      <li><a href="#future">未來展望</a></li>
+      <li><a href="#contact">聯絡方式</a></li>
+
+      <!-- 地球語言切換 -->
+      <li class="language-switcher">
+        <button id="language-toggle" type="button">🌐</button>
+        <ul id="language-menu">
+          <li><a href="index.html">中文</a></li>
+          <li><a href="en.index.html">English</a></li>
+          <li><a href="ja.index.html">日本語</a></li>
+          <li><a href="de.index.html">Deutsch</a></li>
+          <li><a href="vi.index.html">Tiếng Việt</a></li>
+          <li><a href="es.index.html">Español</a></li>
+        </ul>
+      </li>
     </ul>
-   <!-- 地球語言切換按鈕 -->
-<li class="language-switcher">
-  <button id="language-toggle" type="button">🌐</button>
-  <ul id="language-menu">
-    <li><a href="index.html">中文</a></li>
-    <li><a href="en.index.html">English</a></li>
-    <li><a href="ja.index.html">日本語</a></li>
-    <li><a href="de.index.html">Deutsch</a></li>
-    <li><a href="vi.index.html">Tiếng Việt</a></li>
-    <li><a href="es.index.html">Español</a></li>
-  </ul>
-</li>
-</nav>
-
-
-    
-
-         <!-- 跑車動畫 -->
-         <div class="car-animation">
-            <span style="font-size: 24px;">🦖</span>
-        </div>
-    </header>
+  </nav>
+</header>
     
     <section id="hello" class="hero">
         <h1 class="glow">"勇於挑戰，成就卓越"</h1>

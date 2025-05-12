@@ -761,99 +761,13 @@ section.active {
 }
 
 /* 響應式設計 */
-/* ------------------------ */
-/* 桌面版（預設電腦版）設定 */
-/* ------------------------ */
-
+/* 預設電腦版 (寬度 > 1200px) */
 .menu-toggle {
     display: none; /* 電腦版隱藏漢堡 */
 }
 
-.navbar ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.language-switcher {
-    margin-left: 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-}
-.hero h2 {
-    font-size: 32px;
-}
-.hero h3 {
-    font-size: 24px;
-}
-.hero p {
-    font-size: 18px;
-}
-.additional-content, .timeline-content, .project-content {
-    font-size: 18px;
-}
-
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.timeline-item, .project {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.timeline-image, .project-image {
-    width: 50%;
-}
-
-/* ------------------------ */
-/* 平板版（max-width: 992px）設定 */
-/* ------------------------ */
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 36px;
-    }
-    .hero h2 {
-        font-size: 28px;
-    }
-    .hero h3 {
-        font-size: 22px;
-    }
-    .hero p {
-        font-size: 16px;
-    }
-    .additional-content, .timeline-content, .project-content {
-        font-size: 16px;
-    }
-    .image-container {
-        grid-template-columns: repeat(2, 1fr); /* 平板2欄 */
-    }
-    .timeline-item, .project {
-        flex-direction: column;
-    }
-    .timeline-image, .project-image {
-        width: 100%;
-    }
-}
-
-/* ------------------------ */
-/* 手機版（max-width: 768px）設定 */
-/* ------------------------ */
+/* 手機版（<=768px） */
 @media (max-width: 768px) {
-    /* 顯示漢堡按鈕 */
     .menu-toggle {
         display: block;
         background: none;
@@ -861,27 +775,21 @@ section.active {
         font-size: 28px;
         color: white;
         cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 1001;
     }
 
-    /* 隱藏原本的選單，改成直式 */
     .navbar ul {
         display: none;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.85);
         position: absolute;
-        top: 60px; /* header高度 */
+        top: 60px; /* header 高度 */
         right: 0;
         width: 200px;
         border-radius: 8px;
         overflow: hidden;
-        z-index: 1000;
+        padding: 10px 0;
     }
 
-    /* 按下漢堡選單，展開 */
     .navbar ul.active {
         display: flex;
     }
@@ -896,44 +804,35 @@ section.active {
         margin-top: 10px;
     }
 
-    /* 手機版字體尺寸調整 */
-    .hero h1 {
-        font-size: 28px;
-    }
-    .hero h2 {
-        font-size: 22px;
-    }
-    .hero h3 {
-        font-size: 18px;
-    }
-    .hero p, .additional-content, .timeline-content, .project-content {
-        font-size: 14px;
-    }
-
-    /* 圖片區塊改成單欄 */
+    /* 圖片區塊（針對作品區、證照區） */
     .image-container {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr; /* 單列 */
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .image-item img {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* 平板版（769px ~ 992px） */
+@media (max-width: 992px) and (min-width: 769px) {
+    .image-container {
+        grid-template-columns: repeat(2, 1fr); /* 兩列 */
     }
 
-    /* 時間軸跟作品調整 */
-    .timeline, .project {
-        padding: 20px;
+    .image-item img {
+        width: 95%;
     }
-    .timeline-item, .project {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+}
+
+/* 小筆電版（993px ~ 1200px） */
+@media (max-width: 1200px) and (min-width: 993px) {
+    .image-container {
+        grid-template-columns: repeat(3, 1fr); /* 三列（跟電腦版一樣） */
     }
-    .timeline-content, .project-content {
-        width: 100%;
-    }
-    .timeline-image, .project-image {
+
+    .image-item img {
         width: 100%;
     }
 }
