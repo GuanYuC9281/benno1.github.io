@@ -1040,3 +1040,35 @@ section.active {
 #language-menu.show-menu {
     display: block;
 }
+
+/* 地球語言選單預設隱藏 */
+.language-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid cyan;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* 打開時 */
+.language-menu.show {
+    display: block;
+}
+
+/* 每個語言連結 */
+.language-menu li {
+    margin: 5px 0;
+}
+
+.language-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.language-menu li a:hover {
+    color: cyan;
+}
