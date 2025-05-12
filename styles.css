@@ -857,6 +857,7 @@ section.active {
 
 /* 手機版（螢幕小於等於768px） */
 @media (max-width: 768px) {
+
     /* 漢堡選單按鈕顯示 */
     .menu-toggle {
         display: block;
@@ -866,59 +867,6 @@ section.active {
         color: white;
         cursor: pointer;
     }
-    /* 手機版證照圖片優化 */
-.image-container {
-    flex-direction: column;
-    align-items: center;
-}
-
-.image-item {
-    width: 90%;
-    height: auto;
-}
-
-.image-item img {
-    width: 100%;
-    height: auto;
-}
-
-.image-item figcaption {
-    font-size: 16px;
-}
-    /* 手機版卡片翻轉 (未來展望) */
-.card {
-  perspective: 1000px;
-}
-
-.card-inner {
-  width: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  position: relative;
-}
-
-.card.is-flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  backface-visibility: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-}
-
-/* 手機版卡片上方加圖片 (小) */
-.timeline-image {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 10px;
-}
 
     /* 原本的 navbar ul 要隱藏，點漢堡才展開 */
     .navbar ul {
@@ -944,13 +892,13 @@ section.active {
         margin: 10px 0;
     }
 
-    /* 語言切換按鈕置中 */
+    /* 地球語言切換按鈕置中 */
     .language-switcher {
         text-align: center;
         margin-top: 10px;
     }
 
-    /* 關於我區塊圖片與文字改為上下排列 */
+    /* 關於我區塊：上下排列 */
     .about-container {
         flex-direction: column;
         padding: 30px;
@@ -961,7 +909,7 @@ section.active {
         max-width: 100%;
     }
 
-    /* 證照圖片排列改成單排 */
+    /* 證照圖片縮小排列單排 */
     .image-container {
         flex-direction: column;
         align-items: center;
@@ -972,15 +920,26 @@ section.active {
         height: auto;
     }
 
-    /* 工作經驗區塊強制上下排列 */
+    .image-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-item figcaption {
+        font-size: 16px;
+    }
+
+    /* 工作經驗時間軸：強制上下排列 */
     .timeline-item {
         flex-direction: column !important;
+        align-items: center;
         text-align: center;
     }
 
     .timeline-image {
         width: 100px;
         height: 100px;
+        margin: 0 auto 10px;
     }
 
     /* 作品展示區塊調整 */
@@ -988,11 +947,38 @@ section.active {
         width: 90%;
         margin: 20px auto;
     }
+
+    /* 未來展望卡片翻轉設定 */
+    .card {
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+        position: relative;
+    }
+
+    .card.is-flipped .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        backface-visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
 }
 
 /* 平板版（螢幕小於等於992px） */
 @media (max-width: 992px) {
-    /* 保持 flex，稍微收窄一點 */
     .about-container {
         flex-wrap: wrap;
         padding: 40px;
@@ -1010,7 +996,6 @@ section.active {
 
 /* 小筆電版（螢幕小於等於1200px） */
 @media (max-width: 1200px) {
-    /* 小筆電可以讓 about 區塊稍微緊湊一點 */
     .about-container {
         padding: 50px 30px;
     }
@@ -1023,12 +1008,11 @@ section.active {
 
 /* === 響應式設定結束 === */
 
-/* 地球語言選單初始是隱藏的 */
+/* === 地球語言選單控制 === */
 #language-menu {
     display: none;
 }
 
-/* 加上 show-menu 顯示 */
 #language-menu.show-menu {
     display: block;
 }

@@ -10,42 +10,26 @@ window.addEventListener("resize", function() {
     }
 });
 
-// -- 地球語言選單功能 --
+// -- 地球語言選單功能（手機版 + 電腦版皆支援）--
 document.addEventListener("DOMContentLoaded", function () {
     const languageToggle = document.getElementById("language-toggle");
     const languageMenu = document.getElementById("language-menu");
 
     if (languageToggle && languageMenu) {
-        languageToggle.addEventListener("click", function () {
-            languageMenu.style.display = (languageMenu.style.display === "block") ? "none" : "block";
-        });
 
-        document.querySelectorAll("#language-menu a").forEach(link => {
-            link.addEventListener("click", function (e) {
-                e.preventDefault();
-                const targetHref = this.getAttribute("href");
-                if (targetHref) {
-                    window.location.href = targetHref;
-                }
-            });
-        });
-    }
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const languageToggle = document.getElementById("language-toggle");
-    const languageMenu = document.getElementById("language-menu");
-
-    if (languageToggle && languageMenu) {
-        // 先設定手機點擊開關
         languageToggle.addEventListener("click", function (e) {
             e.preventDefault();
+
             if (window.innerWidth <= 768) {
-                // 只針對手機版點擊
+                // 手機版：加/移除 .show-menu 類別
                 languageMenu.classList.toggle("show-menu");
+            } else {
+                // 電腦版：直接切換 display 顯示
+                languageMenu.style.display = (languageMenu.style.display === "block") ? "none" : "block";
             }
         });
 
-        // 手機版點空白地方收合
+        // 手機版點空白區域時自動收起語言選單
         document.addEventListener("click", function (e) {
             if (window.innerWidth <= 768) {
                 if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
@@ -54,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 選擇語言時直接跳轉
+        // 點擊語言選單內連結，跳轉對應頁面
         document.querySelectorAll("#language-menu a").forEach(link => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
@@ -66,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 // -- 打字機效果 --
 document.addEventListener("DOMContentLoaded", function () {
     const typingElement = document.querySelector(".typing");
