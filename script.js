@@ -10,35 +10,19 @@ window.addEventListener("resize", function() {
     }
 });
 
-// -- 地球語言選單功能（手機版 + 電腦版皆支援）--
+// -- 地球語言選單功能 (完整版) --
 document.addEventListener("DOMContentLoaded", function () {
     const languageToggle = document.getElementById("language-toggle");
     const languageMenu = document.getElementById("language-menu");
 
     if (languageToggle && languageMenu) {
-
+        // 點地球按鈕切換
         languageToggle.addEventListener("click", function (e) {
             e.preventDefault();
-
-            if (window.innerWidth <= 768) {
-                // 手機版：加/移除 .show-menu 類別
-                languageMenu.classList.toggle("show-menu");
-            } else {
-                // 電腦版：直接切換 display 顯示
-                languageMenu.style.display = (languageMenu.style.display === "block") ? "none" : "block";
-            }
+            languageMenu.classList.toggle("show-menu");
         });
 
-        // 手機版點空白區域時自動收起語言選單
-        document.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
-                    languageMenu.classList.remove("show-menu");
-                }
-            }
-        });
-
-        // 點擊語言選單內連結，跳轉對應頁面
+        // 點選語言直接跳轉
         document.querySelectorAll("#language-menu a").forEach(link => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
@@ -48,8 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+
+        // 點空白地方關閉（手機專用）
+        document.addEventListener("click", function (e) {
+            if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
+                languageMenu.classList.remove("show-menu");
+            }
+        });
     }
 });
+
 // -- 打字機效果 --
 document.addEventListener("DOMContentLoaded", function () {
     const typingElement = document.querySelector(".typing");

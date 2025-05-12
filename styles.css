@@ -908,6 +908,12 @@ section.active {
     .additional-content {
         max-width: 100%;
     }
+    .image-item figcaption {
+    font-size: 14px;
+    max-width: 90%;
+    white-space: normal; /* 允許文字換行 */
+    overflow-wrap: break-word; /* 必要時強制斷行 */
+}
 
     /* 證照圖片縮小排列單排 */
     .image-container {
@@ -1008,9 +1014,18 @@ section.active {
 
 /* === 響應式設定結束 === */
 
-/* === 地球語言選單控制 === */
+/* 地球語言選單：初始隱藏，有 .show-menu 顯示 */
 #language-menu {
     display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    border: 1px solid cyan;
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px;
+    z-index: 999;
 }
 
 #language-menu.show-menu {
