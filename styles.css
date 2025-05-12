@@ -908,31 +908,40 @@ section.active {
     .additional-content {
         max-width: 100%;
     }
-    .image-item figcaption {
-    font-size: 14px;
-    max-width: 90%;
-    white-space: normal; /* 允許文字換行 */
-    overflow-wrap: break-word; /* 必要時強制斷行 */
-}
-
-    /* 證照圖片縮小排列單排 */
+   
+    /* === 證照區域 響應式設定 === */
+    /* 手機版證照區塊 */
     .image-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px; /* 每張證照間隔 */
     }
 
     .image-item {
         width: 90%;
+        max-width: 300px;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .image-item img {
         width: 100%;
         height: auto;
+        border-radius: 10px;
     }
 
     .image-item figcaption {
+        margin-top: 8px;
         font-size: 16px;
+        color: white;
+        background: none;
+        white-space: normal; /* 允許文字換行 */
+        overflow-wrap: break-word; /* 必要時強制斷行 */
+        max-width: 100%;
     }
 
     /* 工作經驗時間軸：強制上下排列 */

@@ -10,20 +10,26 @@ window.addEventListener("resize", function() {
     }
 });
 
-// -- 地球語言選單功能 (完整版) --
+// -- 地球語言選單功能 (修正版) --
 document.addEventListener("DOMContentLoaded", function () {
     const languageToggle = document.getElementById("language-toggle");
     const languageMenu = document.getElementById("language-menu");
 
     if (languageToggle && languageMenu) {
-        // 點地球按鈕切換
         languageToggle.addEventListener("click", function (e) {
-            e.preventDefault();
+            e.stopPropagation(); // 不讓事件冒泡
             languageMenu.classList.toggle("show-menu");
         });
 
+        document.addEventListener("click", function (e) {
+            // 如果不是點到按鈕或選單本身，就關閉
+            if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
+                languageMenu.classList.remove("show-menu");
+            }
+        });
+
         // 點選語言直接跳轉
-        document.querySelectorAll("#language-menu a").forEach(link => {
+        languageMenu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 const targetHref = this.getAttribute("href");
@@ -31,13 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = targetHref;
                 }
             });
-        });
-
-        // 點空白地方關閉（手機專用）
-        document.addEventListener("click", function (e) {
-            if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
-                languageMenu.classList.remove("show-menu");
-            }
         });
     }
 });
