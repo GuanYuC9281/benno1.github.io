@@ -127,6 +127,7 @@ nav ul li select option {
     position: relative;
 }
 
+
 #language-toggle {
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -865,6 +866,59 @@ section.active {
         color: white;
         cursor: pointer;
     }
+    /* 手機版證照圖片優化 */
+.image-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-item {
+    width: 90%;
+    height: auto;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+}
+
+.image-item figcaption {
+    font-size: 16px;
+}
+    /* 手機版卡片翻轉 (未來展望) */
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  position: relative;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* 手機版卡片上方加圖片 (小) */
+.timeline-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+}
 
     /* 原本的 navbar ul 要隱藏，點漢堡才展開 */
     .navbar ul {
@@ -969,3 +1023,12 @@ section.active {
 
 /* === 響應式設定結束 === */
 
+/* 地球語言選單初始是隱藏的 */
+#language-menu {
+    display: none;
+}
+
+/* 加上 show-menu 顯示 */
+#language-menu.show-menu {
+    display: block;
+}

@@ -31,6 +31,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const languageToggle = document.getElementById("language-toggle");
+    const languageMenu = document.getElementById("language-menu");
+
+    if (languageToggle && languageMenu) {
+        // 先設定手機點擊開關
+        languageToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.innerWidth <= 768) {
+                // 只針對手機版點擊
+                languageMenu.classList.toggle("show-menu");
+            }
+        });
+
+        // 手機版點空白地方收合
+        document.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
+                    languageMenu.classList.remove("show-menu");
+                }
+            }
+        });
+
+        // 選擇語言時直接跳轉
+        document.querySelectorAll("#language-menu a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetHref = this.getAttribute("href");
+                if (targetHref) {
+                    window.location.href = targetHref;
+                }
+            });
+        });
+    }
+});
 
 // -- 打字機效果 --
 document.addEventListener("DOMContentLoaded", function () {
@@ -289,6 +324,16 @@ document.addEventListener("DOMContentLoaded", function() {
     menuToggle.addEventListener('click', function() {
         navbarMenu.classList.toggle('active');
     });
+    // -- 手機版點擊卡片翻轉 --
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('is-flipped');
+        });
+    });
+});
 
     // 點選選單項目後收起
     const menuLinks = navbarMenu.querySelectorAll('a');
