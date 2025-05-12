@@ -122,56 +122,6 @@ nav ul li select option {
     color: white;
 }
 
-/* ====== 地球按鈕（靜態切換語言） ====== */
-.language-switcher {
-    position: relative;
-}
-
-
-#language-toggle {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: 1px solid cyan;
-    padding: 5px 10px;
-    font-size: 18px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#language-toggle:hover {
-    border-color: #0ff;
-    box-shadow: 0px 0px 10px cyan;
-}
-
-/* 小語言選單（初始隱藏） */
-#language-menu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background: rgba(0,0,0,0.8);
-    border: 1px solid cyan;
-    border-radius: 5px;
-    list-style: none;
-    padding: 10px;
-    z-index: 1000;
-}
-
-#language-menu li {
-    margin: 5px 0;
-}
-
-#language-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-#language-menu li a:hover {
-    color: cyan;
-}
-
 /* ====== 全站區塊間距（原本的） ====== */
 section {
     padding: 100px 20px;
@@ -892,11 +842,6 @@ section.active {
         margin: 10px 0;
     }
 
-    /* 地球語言切換按鈕置中 */
-    .language-switcher {
-        text-align: center;
-        margin-top: 10px;
-    }
 
     /* 關於我區塊：上下排列 */
     .about-container {
@@ -1023,52 +968,59 @@ section.active {
 
 /* === 響應式設定結束 === */
 
-/* 地球語言選單：初始隱藏，有 .show-menu 顯示 */
+/* 地球按鈕樣式 */
+#language-toggle {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid cyan;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1001;
+}
+
+/* 地球按鈕 hover 效果 */
+#language-toggle:hover {
+    border-color: #0ff;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+/* 地球語言選單 (一開始是隱藏) */
 #language-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 0;
-    background: rgba(0,0,0,0.9);
+    transform: translateX(-80%);
+    background: rgba(0, 0, 0, 0.85);
     border: 1px solid cyan;
     border-radius: 8px;
     list-style: none;
     padding: 10px;
-    z-index: 999;
-}
-
-#language-menu.show-menu {
-    display: block;
-}
-
-/* 地球語言選單預設隱藏 */
-.language-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: rgba(0, 0, 0, 0.85);
-    border: 1px solid cyan;
-    border-radius: 8px;
-    padding: 10px;
+    min-width: 150px;
     z-index: 1000;
 }
 
-/* 打開時 */
-.language-menu.show {
+/* 展開語言選單時，加上 show */
+#language-menu.show {
     display: block;
 }
 
-/* 每個語言連結 */
-.language-menu li {
-    margin: 5px 0;
+/* 語言選單內部樣式 */
+#language-menu li {
+    margin: 8px 0;
+    text-align: center;
 }
 
-.language-menu li a {
+#language-menu li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-.language-menu li a:hover {
+#language-menu li a:hover {
     color: cyan;
 }

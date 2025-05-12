@@ -10,26 +10,25 @@ window.addEventListener("resize", function() {
     }
 });
 
-// -- 地球語言選單功能 (修正版) --
 document.addEventListener("DOMContentLoaded", function () {
     const languageToggle = document.getElementById("language-toggle");
     const languageMenu = document.getElementById("language-menu");
 
     if (languageToggle && languageMenu) {
         languageToggle.addEventListener("click", function (e) {
-            e.stopPropagation(); // 不讓事件冒泡
-            languageMenu.classList.toggle("show-menu");
+            e.stopPropagation(); // 防止事件冒泡
+            languageMenu.classList.toggle("show"); // 切換展開/收合
         });
 
+        // 點選空白地方，收起選單
         document.addEventListener("click", function (e) {
-            // 如果不是點到按鈕或選單本身，就關閉
             if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
-                languageMenu.classList.remove("show-menu");
+                languageMenu.classList.remove("show");
             }
         });
 
-        // 點選語言直接跳轉
-        languageMenu.querySelectorAll("a").forEach(link => {
+        // 點選語言後跳轉
+        document.querySelectorAll("#language-menu a").forEach(link => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 const targetHref = this.getAttribute("href");
