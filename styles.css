@@ -808,7 +808,7 @@ section.active {
 /* 手機版（螢幕小於等於768px） */
 @media (max-width: 768px) {
 
-    /* 漢堡選單按鈕顯示 */
+    /* --- 漢堡選單按鈕 --- */
     .menu-toggle {
         display: block;
         background: none;
@@ -818,7 +818,7 @@ section.active {
         cursor: pointer;
     }
 
-    /* 原本的 navbar ul 要隱藏，點漢堡才展開 */
+    /* --- 手機版 navbar ul --- */
     .navbar ul {
         display: none;
         flex-direction: column;
@@ -842,8 +842,7 @@ section.active {
         margin: 10px 0;
     }
 
-
-    /* 關於我區塊：上下排列 */
+    /* --- 關於我區塊（上下排列） --- */
     .about-container {
         flex-direction: column;
         padding: 30px;
@@ -853,14 +852,13 @@ section.active {
     .additional-content {
         max-width: 100%;
     }
-   
-    /* === 證照區域 響應式設定 === */
-    /* 手機版證照區塊 */
+
+    /* --- 證照區塊（單排） --- */
     .image-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* 每張證照間隔 */
+        gap: 20px;
     }
 
     .image-item {
@@ -884,12 +882,12 @@ section.active {
         font-size: 16px;
         color: white;
         background: none;
-        white-space: normal; /* 允許文字換行 */
-        overflow-wrap: break-word; /* 必要時強制斷行 */
+        white-space: normal;
+        overflow-wrap: break-word;
         max-width: 100%;
     }
 
-    /* 工作經驗時間軸：強制上下排列 */
+    /* --- 工作經驗時間軸（上下排列） --- */
     .timeline-item {
         flex-direction: column !important;
         align-items: center;
@@ -902,13 +900,13 @@ section.active {
         margin: 0 auto 10px;
     }
 
-    /* 作品展示區塊調整 */
+    /* --- 作品展示區塊調整 --- */
     .project {
         width: 90%;
         margin: 20px auto;
     }
 
-    /* 未來展望卡片翻轉設定 */
+    /* --- 未來展望卡片翻轉設定 --- */
     .card {
         perspective: 1000px;
     }
@@ -968,7 +966,10 @@ section.active {
 
 /* === 響應式設定結束 === */
 
-/* 地球按鈕樣式 */
+
+/* === 地球語言選單設定開始 === */
+
+/* 地球按鈕（電腦+手機共用） */
 #language-toggle {
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -982,13 +983,12 @@ section.active {
     z-index: 1001;
 }
 
-/* 地球按鈕 hover 效果 */
 #language-toggle:hover {
     border-color: #0ff;
     box-shadow: 0px 0px 10px cyan;
 }
 
-/* 地球語言選單 (一開始是隱藏) */
+/* 地球語言選單本體（共用） */
 #language-menu {
     display: none;
     position: absolute;
@@ -1004,7 +1004,7 @@ section.active {
     z-index: 1000;
 }
 
-/* 展開語言選單時，加上 show */
+/* 展開時 */
 #language-menu.show {
     display: block;
 }
@@ -1024,3 +1024,5 @@ section.active {
 #language-menu li a:hover {
     color: cyan;
 }
+
+/* === 地球語言選單設定結束 === */
