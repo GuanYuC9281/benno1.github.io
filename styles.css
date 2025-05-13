@@ -969,7 +969,12 @@ section.active {
 
 /* === 地球語言選單設定開始 === */
 
-/* 地球按鈕（電腦+手機共用） */
+.language-wrapper {
+    position: relative; /* 相對地球按鈕定位 */
+    display: inline-block; /* 讓它不占滿整行 */
+}
+
+/* 地球按鈕 */
 #language-toggle {
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -979,37 +984,31 @@ section.active {
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
-    position: relative;
-    z-index: 1001;
 }
 
-#language-toggle:hover {
-    border-color: #0ff;
-    box-shadow: 0px 0px 10px cyan;
-}
-
-/* 地球語言選單本體（共用） */
+/* 地球選單本體 */
 #language-menu {
     display: none;
     position: absolute;
-    top: 40px;
-    right: 0;
-    transform: translateX(-80%);
+    top: 100%; /* 在地球按鈕正下方 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平置中 */
     background: rgba(0, 0, 0, 0.85);
     border: 1px solid cyan;
     border-radius: 8px;
     list-style: none;
     padding: 10px;
-    min-width: 150px;
+    min-width: 140px;
     z-index: 1000;
+    margin-top: 5px; /* 跟地球按鈕留一點間距 */
 }
 
-/* 展開時 */
+/* 打開時 */
 #language-menu.show {
     display: block;
 }
 
-/* 語言選單內部樣式 */
+/* 語言選單內部 */
 #language-menu li {
     margin: 8px 0;
     text-align: center;
@@ -1025,4 +1024,11 @@ section.active {
     color: cyan;
 }
 
+/* 手機版縮小一點 */
+@media (max-width: 768px) {
+    #language-menu {
+        width: 130px;
+        padding: 8px;
+    }
+}
 /* === 地球語言選單設定結束 === */
