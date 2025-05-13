@@ -1026,47 +1026,73 @@ section.active {
 
 /* 手機版縮小一點 */
 @media (max-width: 768px) {
-  /* 手機版地球包一層 relative */
+  /* 外層li當基準 */
   .language-switcher {
     position: relative;
-    z-index: 1001; /* 讓地球跟語言選單比漢堡選單高 */
-  }
-  .language-wrapper {
-    position: absolute;
-    top: 60;
-    right: 10px;
-    z-index: 3000; /* 讓地球跟語言選單比漢堡選單高 */
   }
 
-  /* 手機版語言選單絕對定位在地球下面 */
-  #language-menu {
+  /* 包地球跟選單的div */
+  .language-wrapper {
     position: absolute;
-    top: calc(100% + 8px); /* 地球按鈕底下 8px距離 */
-    right: 0;
-    min-width: 120px; /* 最小寬度設120px */
-    max-width: 40vw; /* 最寬最多佔螢幕40% */
+    top: 10px; /* 離上方距離自己微調 */
+    right: 10px;
+    z-index: 3000; /* 在漢堡選單上面 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 地球按鈕 */
+  #language-toggle {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid cyan;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3001; /* 保證地球本身也在上層 */
+  }
+
+  /* 地球hover */
+  #language-toggle:hover {
+    border-color: #0ff;
+    box-shadow: 0px 0px 10px cyan;
+  }
+
+  /* 語言選單 */
+  #language-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 從地球下方展開 */
+    margin-top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.9);
     border: 1px solid cyan;
     border-radius: 8px;
     list-style: none;
     padding: 8px 0;
-    display: none;
+    min-width: 140px;
     z-index: 4000;
-    text-align: center;
   }
 
+  /* 點擊展開 */
   #language-menu.show {
     display: block;
   }
 
   #language-menu li {
-    margin: 6px 0;
+    margin: 5px 0;
+    text-align: center;
   }
 
   #language-menu li a {
-    font-size: 4vw; /* 字體大小也跟螢幕寬度成比例 */
     color: white;
     text-decoration: none;
+    font-size: 16px;
   }
 
   #language-menu li a:hover {
