@@ -1026,9 +1026,47 @@ section.active {
 
 /* 手機版縮小一點 */
 @media (max-width: 768px) {
-    #language-menu {
-        width: 130px;
-        padding: 8px;
-    }
+  /* 手機版地球包一層 relative */
+  .language-switcher {
+    position: relative;
+    z-index: 1001; /* 讓地球跟語言選單比漢堡選單高 */
+  }
+
+  /* 手機版語言選單絕對定位在地球下面 */
+  #language-menu {
+    position: absolute;
+    top: 40px; /* 根據地球按鈕大小調整 */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid cyan;
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px;
+    min-width: 140px;
+    z-index: 1002; /* 高於漢堡 */
+    display: none;
+  }
+
+  /* 展開時 */
+  #language-menu.show {
+    display: block;
+  }
+
+  /* 選單內文字 */
+  #language-menu li {
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  #language-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  #language-menu li a:hover {
+    color: cyan;
+  }
 }
 /* === 地球語言選單設定結束 === */
