@@ -1031,6 +1031,12 @@ section.active {
     position: relative;
     z-index: 1001; /* 讓地球跟語言選單比漢堡選單高 */
   }
+  .language-wrapper {
+    position: absolute;
+    top: 60;
+    right: 10px;
+    z-index: 3000; /* 讓地球跟語言選單比漢堡選單高 */
+  }
 
   /* 手機版語言選單絕對定位在地球下面 */
   #language-menu {
@@ -1043,9 +1049,9 @@ section.active {
     border: 1px solid cyan;
     border-radius: 8px;
     list-style: none;
-    padding: 8px;
+    padding: 8px 0;
     display: none;
-    z-index: 2000;
+    z-index: 4000;
     text-align: center;
   }
 
