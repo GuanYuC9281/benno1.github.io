@@ -307,6 +307,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// 卡片點擊翻轉
+document.querySelectorAll('.card-inner').forEach(inner => {
+  inner.addEventListener('click', () => {
+    inner.classList.toggle('is-flipped');
+  });
+});
 
     // 點選選單項目後收起
     const menuLinks = navbarMenu.querySelectorAll('a');

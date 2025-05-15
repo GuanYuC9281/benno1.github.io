@@ -907,34 +907,33 @@ section.active {
     }
 
     /* --- 未來展望卡片翻轉設定 --- */
-    .card {
-        perspective: 1000px;
-    }
-
-    .card-inner {
-        width: 100%;
-        transform-style: preserve-3d;
-        transition: transform 0.8s;
-        position: relative;
-    }
-
-    .card.is-flipped .card-inner {
-        transform: rotateY(180deg);
-    }
-
-    .card-front,
-    .card-back {
-        backface-visibility: hidden;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .card-back {
-        transform: rotateY(180deg);
-    }
+.card {
+  perspective: 1000px;
 }
 
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  position: relative;
+}
+
+.card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
 /* 平板版（螢幕小於等於992px） */
 @media (max-width: 992px) {
     .about-container {
@@ -963,7 +962,7 @@ section.active {
         margin: 30px auto;
     }
 }
-
+}
 /* === 響應式設定結束 === */
 
 
